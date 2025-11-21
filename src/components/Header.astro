@@ -1,0 +1,19 @@
+---
+import avatar from '../assets/avatar.svg';
+import logo from '../assets/logo.png'; 
+---
+
+<header class="flex justify-between items-center p-2 bg-blue-50 shadow-lg shadow-blue-950/50 ">
+    <div class="flex items-center m-5">
+        <div class="rounded-full   overflow-hidden w-30 h-30 mr-5">
+            <img src={avatar.src} alt="">
+        </div>
+        <div class="flex flex-col gap-3"  >
+            <h1 class="font-bold text-4xl">Doris</h1>
+            <p>Siempre disponible para ayudarte</p>
+        </div>
+    </div>
+    <div>
+        <img src={logo.src} alt="Logo" class="w-50 mr-5"/>
+    </div>
+</header>
