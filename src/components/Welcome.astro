@@ -1,8 +1,12 @@
 ---
-import astroLogo from '../assets/astro.svg';
-import background from '../assets/background.svg';
+
 import Header from './Header.astro';
+import Footer from './Footer.astro';
+import Message from './Message.astro';
 ---
 
-
 <Header />
+<main class="mx-auto w-[min(90%,120rem)] my-10 flex flex-col gap-10">
+    <Message />
+</main>
+<Footer />
