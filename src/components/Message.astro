@@ -1,10 +1,10 @@
 ---
 import ButtonMessage from './ButtonMessage.astro';
-
+import Button from './ButtonMessage.astro';
 ---
-<footer class="bg-blue-50  drop-shadow-[0_-10px_10px_#1c388e63] shadow-lg shadow-blue-900/50 h-auto py-2 ">
+<div class=" h-auto py-2">
     <div class="mx-auto w-[min(90%,120rem)] flex flex-row justify-center items-center h-full gap-8">
-        <input type="text" id="message" placeholder="Escribe tu mensaje aquí" class="flex-1 p-5 rounded-4xl bg-gray-200 placeholder-gray-500 text-[1.4rem] text-black focus:outline-none focus:ring-4 focus:ring-[#f77f00]"/>
+        <input type="text" id="message" placeholder="Escribe tu mensaje aquí" class="flex-1 p-3 rounded-4xl bg-gray-200 placeholder-gray-500 text-[15px] text-black focus:outline-none focus:ring-1 focus:ring-[#f77f00]"/>
         <ButtonMessage>
             <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-telegram"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M15 10l-4 4l6 6l4 -16l-18 7l4 2l2 6l3 -4" /></svg>
         </ButtonMessage>

@@ -1,0 +1,10 @@
+---
+import avatar from '../assets/avatar.svg';
+const {tamaño} = Astro.props;
+
+const clases = `rounded-full   overflow-hidden w-${tamaño} h-${tamaño} mr-5`
+---
+
+<div class=`rounded-full   overflow-hidden w-20 h-20 mr-5`>
+    <img src={avatar.src} alt="">
+</div>
