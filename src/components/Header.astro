@@ -1,19 +1,19 @@
 ---
-import avatar from '../assets/avatar.svg';
+
 import logo from '../assets/logo.png'; 
+import Avatar from './Avatar.astro';
+
 ---
 
-<header class="flex justify-between items-center p-2 bg-blue-50 shadow-lg shadow-blue-900/50 ">
+<header class="flex justify-between items-center  bg-blue-50 shadow-lg shadow-blue-900/50 ">
     <div class="flex items-center m-5">
-        <div class="rounded-full   overflow-hidden w-30 h-30 mr-5">
-            <img src={avatar.src} alt="">
-        </div>
+        <Avatar/>
         <div class="flex flex-col gap-3"  >
-            <h1 class="text-5xl font-DejaVu font-stretch-expanded font-bold">Doris</h1>
-            <p class="text-2xl font-Montserrat font-light">Siempre disponible para ayudarte</p>
+            <h1 class="text-2xl font-DejaVu font-stretch-expanded font-bold">OmiBot</h1>
+            <p class="text-2xl font-Montserrat font-light">Asistente de soporte</p>
         </div>
     </div>
     <div>
-        <img src={logo.src} alt="Logo" class="w-50 mr-5"/>
+        <img src={logo.src} alt="Logo" class="w-15 mr-15"/>
     </div>
 </header>
