@@ -1,0 +1,23 @@
+---
+
+import logo from '../assets/logo.png'; 
+import Avatar from './Avatar.astro';
+import NavBar from './NavBar.astro';
+
+---
+
+<div class="flex flex-col justify-between items-center max-w-max h-full bg-[#221d21] shadow-lg shadow-blue-900/50  sticky top-0">
+    <div class="flex flex-col items-center m-5 text-[#FFFFFF] gap-3">
+        <Avatar/>
+        <div class="flex flex-col gap-3 items-center"  >
+            <h1 class="text-2xl font-DejaVu font-stretch-expanded font-bold">OmiBot</h1>
+            <p class="text-1xl font-Montserrat font-light">Asistente de soporte</p>
+            <div class="mt-15">
+                <NavBar/>
+            </div>
+        </div>
+    </div>
+    <div>
+        <img src={logo.src} alt="Logo" class="w-15 mb-4"/>
+    </div>
+</div>

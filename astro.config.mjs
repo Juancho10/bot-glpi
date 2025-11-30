@@ -5,6 +5,8 @@ import tailwindcss from '@tailwindcss/vite';
 
 import vue from '@astrojs/vue';
 
+import alpinejs from '@astrojs/alpinejs';
+
 // https://astro.build/config
 export default defineConfig({
   vite: {
@@ -15,5 +17,5 @@ export default defineConfig({
     enabled: false,
   },
 
-  integrations: [vue()]
+  integrations: [vue(), alpinejs()]
 });

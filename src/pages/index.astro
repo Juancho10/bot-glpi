@@ -1,7 +1,11 @@
 ---
+import Message from '../components/Message.astro';
 import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
 ---
 <Layout title="Chatbot OMIA">
-	<Welcome />
+	<div class="grid md:grid-cols-[1fr_4fr] h-screen grid-flow-col gap-4 justify-start items-start">
+		<Welcome  />
+		<Message />
+	</div>
 </Layout>

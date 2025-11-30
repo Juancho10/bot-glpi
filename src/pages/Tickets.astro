@@ -1,0 +1,47 @@
+---
+import { getCollection } from 'astro:content';
+import Welcome from '../components/Welcome.astro';
+import Layout from '../layouts/Layout.astro';
+/*
+export async function getStaticPaths() {
+    const tickets = await getCollection("tickets");
+
+    return tickets.map((ticket)=>({
+        params: {id: ticket.slug},
+        props: {ticket}
+    } ))
+}*/
+const tickets = await getCollection("tickets");
+//const {ticket} = Astro.props;
+//const {data} = ticket
+//const {id, title, status, lastUpdate, openingDate, priority, assignedTo, category, timeToResolve} = data 
+---
+<Layout title="Chatbot OMIA">
+    <div class="grid md:grid-cols-[1fr_5fr] h-screen grid-flow-col gap-4 justify-start items-start">
+        <Welcome />
+        <section class="">
+            <div class=" mx-auto max-w-full">
+                <div class="grid gap-6 md:grid-cols-3 m-10">
+                    {
+                        tickets.map((ticket)=>{
+                            const {slug, data} = ticket
+                            const {id, title, status, lastUpdate, openingDate, priority, assignedTo, category, timeToResolve} = data 
+                            return (
+                                <div class="p-6 bg-gray-800 border border-gray-700 rounded-lg shadow-md">
+                                    <h2 class="mb-2 text-2xl font-bold text-white">Ticket #{id}: {title}</h2>
+                                    <p class="mb-1 text-gray-300"><strong>Status:</strong> {status}</p>
+                                    <p class="mb-1 text-gray-300"><strong>Priority:</strong> {priority}</p>
+                                    <p class="mb-1 text-gray-300"><strong>Category:</strong> {category}</p>
+                                    <p class="mb-1 text-gray-300"><strong>Assigned To:</strong> {assignedTo}</p>
+                                    <p class="mb-1 text-gray-300"><strong>Opening Date:</strong> {openingDate}</p>
+                                    <p class="mb-1 text-gray-300"><strong>Last Update:</strong> {lastUpdate}</p>
+                                    <p class="mb-4 text-gray-300"><strong>Time to Resolve:</strong> {timeToResolve}</p>
+                                </div>
+                            )
+                        })
+                    }
+                </div>
+            </div>
+        </section>
+    </div>
+</Layout>
