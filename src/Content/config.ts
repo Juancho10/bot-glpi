@@ -5,9 +5,9 @@ import { defineCollection, z } from "astro:content";
 // Definición de la colección "tickets" con su esquema correspondiente
 const tickets = defineCollection({
     schema: z.object({
-        id: z.string(),
+        id: z.number(),
         title: z.string(),
-        status: z.string(),
+        status: z.number(),
         lastUpdate: z.string(),
         openingDate: z.string(),
         priority: z.string(),

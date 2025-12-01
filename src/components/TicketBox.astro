@@ -1,0 +1,45 @@
+---
+import { GLPI_API, GLPI_APP_TOKEN, USER_TOKEN } from "astro:env/client";
+
+
+const headers = {
+    "Content-Type": "application/json",
+    "App-Token": GLPI_APP_TOKEN,
+    "Authorization": `user_token ${USER_TOKEN}`
+}
+
+    console.log("GLPI_API:", GLPI_API);
+    let myHeader = new Headers();
+    myHeader.append("Content-Type", "application/json");
+    myHeader.append("App-Token", GLPI_APP_TOKEN);
+    myHeader.append("Authorization", `user_token ${USER_TOKEN}`);
+    const enpointInit = `${GLPI_API}/initSession`;
+    const enpointTickets = `${GLPI_API}/Ticket`;
+    fetch(enpointInit,{
+        method: 'GET',
+        headers: myHeader
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log("API Response:", data); 
+    })
+
+    fetch(enpointTickets,{
+        method: 'GET',
+        headers: {
+            "Content-Type": "application/json",
+            "App-Token": GLPI_APP_TOKEN,
+            "Session-Token": "8ee177f4c0b17f3d4360502e210782c0",
+        }
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log("Tickets Response:", data); 
+    })
+---
+
+<div class="grid gap-6 md:grid-cols-3 m-10">
+    <div class="p-6 bg-gray-800 border border-gray-700 rounded-lg shadow-md">
+
+    </div>
+</div>

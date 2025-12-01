@@ -1,7 +1,7 @@
 ---
-id: "3"
+id: 3
 title: falla en correo
-status: New
+status: 1
 lastUpdate: "2025-11-26 19:55"
 openingDate: "2025-11-26 19:55"
 priority: Low

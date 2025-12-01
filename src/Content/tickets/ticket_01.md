@@ -1,7 +1,7 @@
 ---
-id: "1"
+id: 1
 title: Mi pc no enciende
-status: New
+status: 1
 lastUpdate: 2025-11-26 18:22
 openingDate: 2025-11-26 18:22
 priority: Low

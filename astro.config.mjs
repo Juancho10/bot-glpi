@@ -1,11 +1,9 @@
 // @ts-check
-import { defineConfig } from 'astro/config';
+import { defineConfig, envField } from 'astro/config';
 
 import tailwindcss from '@tailwindcss/vite';
 
 import vue from '@astrojs/vue';
-
-import alpinejs from '@astrojs/alpinejs';
 
 // https://astro.build/config
 export default defineConfig({
@@ -17,5 +15,12 @@ export default defineConfig({
     enabled: false,
   },
 
-  integrations: [vue(), alpinejs()]
+  integrations: [vue()],
+  env: {
+    schema:{
+      GLPI_API: envField.string({context: 'client', access: 'public'}),
+      GLPI_APP_TOKEN: envField.string({context: 'client', access: 'public'}),
+      USER_TOKEN: envField.string({context: 'client', access: 'public'}),
+    }
+  }
 });

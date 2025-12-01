@@ -1,7 +1,7 @@
 ---
-id: "2"
+id: 2
 title: mi teclado no funciona
-status: New
+status: 1
 lastUpdate: 2025-11-26 19:44
 openingDate: 2025-11-26 19:44
 priority: Low

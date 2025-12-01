@@ -4,6 +4,8 @@ import logo from '../assets/logo.png';
 import Avatar from './Avatar.astro';
 import NavBar from './NavBar.astro';
 
+const usuario = "Invitado";
+
 ---
 
 <div class="flex flex-col justify-between items-center max-w-max h-full bg-[#221d21] shadow-lg shadow-blue-900/50  sticky top-0">
@@ -17,7 +19,8 @@ import NavBar from './NavBar.astro';
             </div>
         </div>
     </div>
-    <div>
+    <div class="items-center flex flex-col mb-5 text-[#FFFFFF] gap-8">
+        <p class="text-1xl font-Montserrat font-light">usuario: {usuario}</p>
         <img src={logo.src} alt="Logo" class="w-15 mb-4"/>
     </div>
 </div>
